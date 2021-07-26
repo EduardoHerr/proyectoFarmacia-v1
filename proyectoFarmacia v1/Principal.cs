@@ -79,5 +79,10 @@ namespace proyectoFarmacia_v1
 		{
 			abrirForms(new fechaHora());
 		}
+
+		private void btnUsuario_Click(object sender, EventArgs e)
+		{
+			abrirForms(new adLogin());
+		}
 	}
 }

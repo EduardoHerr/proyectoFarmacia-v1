@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adBodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adBodega.Designer.cs">
+      <DependentUpon>adBodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adLogin.Designer.cs">
+      <DependentUpon>adLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="adProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +92,12 @@
     <Compile Include="vistaUsuario.Designer.cs">
       <DependentUpon>vistaUsuario.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="adBodega.resx">
+      <DependentUpon>adBodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adLogin.resx">
+      <DependentUpon>adLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adProveedor.resx">
       <DependentUpon>adProveedor.cs</DependentUpon>
     </EmbeddedResource>
