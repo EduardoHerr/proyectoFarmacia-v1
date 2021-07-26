@@ -50,6 +50,7 @@ namespace proyectoFarmacia_v1
 		private void Principal_Load(object sender, EventArgs e)
 		{
 			pnlReportes.Visible = false;
+			pictureBox1_Click(null, e);
 		}
 
 		private void abrirForms(object formhija)
@@ -66,7 +67,17 @@ namespace proyectoFarmacia_v1
 
 		private void btnBodega_Click(object sender, EventArgs e)
 		{
+			
+		}
+
+		private void btnProveedor_Click(object sender, EventArgs e)
+		{
 			abrirForms(new adProveedor());
+		}
+
+		private void pictureBox1_Click(object sender, EventArgs e)
+		{
+			abrirForms(new fechaHora());
 		}
 	}
 }

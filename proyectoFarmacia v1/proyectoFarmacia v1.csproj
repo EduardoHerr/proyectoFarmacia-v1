@@ -54,6 +54,12 @@
     </Compile>
     <Compile Include="clsLogin.cs" />
     <Compile Include="dbConexion.cs" />
+    <Compile Include="fechaHora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fechaHora.Designer.cs">
+      <DependentUpon>fechaHora.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     </Compile>
     <EmbeddedResource Include="adProveedor.resx">
       <DependentUpon>adProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fechaHora.resx">
+      <DependentUpon>fechaHora.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -147,6 +156,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\disable_remove_delete_exit_close_11881.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loupe_78347.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addnewfile_99671.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editfile_99747.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelbutton_99626.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

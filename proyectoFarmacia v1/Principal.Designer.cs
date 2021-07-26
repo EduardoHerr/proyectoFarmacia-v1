@@ -343,7 +343,7 @@ namespace proyectoFarmacia_v1
 			this.btnProveedor.TabIndex = 9;
 			this.btnProveedor.Text = "PROVEEDOR";
 			this.btnProveedor.UseVisualStyleBackColor = true;
-			this.btnProveedor.Click += new System.EventHandler(this.button2_Click);
+			this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
 			// 
 			// btnBodega
 			// 
@@ -372,6 +372,7 @@ namespace proyectoFarmacia_v1
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
+			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
 			// 
 			// Principal
 			// 
@@ -381,6 +382,7 @@ namespace proyectoFarmacia_v1
 			this.Controls.Add(this.panelPrincipal);
 			this.Controls.Add(this.panel1);
 			this.Name = "Principal";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Principal";
 			this.Load += new System.EventHandler(this.Principal_Load);
 			this.panel1.ResumeLayout(false);

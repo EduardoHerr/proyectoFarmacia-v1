@@ -40,6 +40,7 @@ namespace proyectoFarmacia_v1
 				Principal admin = new Principal();
 				admin.ShowDialog();
 				this.Dispose();
+
 			}else if (log.Ingresar(txtUser.Text, txtPass.Text) == 2)
 			{
 				vistaUsuario user = new vistaUsuario();
@@ -105,10 +106,13 @@ namespace proyectoFarmacia_v1
 					}
 					else
 					{
-						inicioSesion();
+						
 						intentos = 3;
+						inicioSesion();
 						limpiar();
+						
 						btnIngresa();
+						
 					}
 				}
 			}
