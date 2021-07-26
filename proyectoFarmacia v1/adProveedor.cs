@@ -16,5 +16,15 @@ namespace proyectoFarmacia_v1
 		{
 			InitializeComponent();
 		}
+
+		private void limpiar()
+		{
+			txtBusqueda.Text = txtCi.Text = txtMail.Text = txtNombre.Text = txtRazon.Text = txtTelf.Text = "";
+		}
+
+		private void btnLimpiar_Click(object sender, EventArgs e)
+		{
+			limpiar();
+		}
 	}
 }

@@ -169,5 +169,8 @@
   <ItemGroup>
     <None Include="Resources\cancelbutton_99626.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backspace-arrow_icon-icons.com_72865.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

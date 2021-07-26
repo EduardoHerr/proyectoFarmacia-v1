@@ -123,6 +123,16 @@ namespace proyectoFarmacia_v1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backspace_arrow_icon_icons_com_72865 {
+            get {
+                object obj = ResourceManager.GetObject("backspace-arrow_icon-icons.com_72865", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap broker {
             get {
                 object obj = ResourceManager.GetObject("broker", resourceCulture);

@@ -37,16 +37,17 @@ namespace proyectoFarmacia_v1
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.textBox4 = new System.Windows.Forms.TextBox();
-			this.textBox5 = new System.Windows.Forms.TextBox();
-			this.textBox6 = new System.Windows.Forms.TextBox();
-			this.button4 = new System.Windows.Forms.Button();
-			this.button5 = new System.Windows.Forms.Button();
+			this.txtNombre = new System.Windows.Forms.TextBox();
+			this.txtCi = new System.Windows.Forms.TextBox();
+			this.txtRazon = new System.Windows.Forms.TextBox();
+			this.txtMail = new System.Windows.Forms.TextBox();
+			this.txtTelf = new System.Windows.Forms.TextBox();
+			this.txtBusqueda = new System.Windows.Forms.TextBox();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.label6 = new System.Windows.Forms.Label();
+			this.btnLimpiar = new System.Windows.Forms.Button();
+			this.button5 = new System.Windows.Forms.Button();
+			this.button4 = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
@@ -58,12 +59,12 @@ namespace proyectoFarmacia_v1
 			// panel1
 			// 
 			this.panel1.Controls.Add(this.button2);
-			this.panel1.Controls.Add(this.textBox6);
-			this.panel1.Controls.Add(this.textBox5);
-			this.panel1.Controls.Add(this.textBox4);
-			this.panel1.Controls.Add(this.textBox3);
-			this.panel1.Controls.Add(this.textBox2);
-			this.panel1.Controls.Add(this.textBox1);
+			this.panel1.Controls.Add(this.txtBusqueda);
+			this.panel1.Controls.Add(this.txtTelf);
+			this.panel1.Controls.Add(this.txtMail);
+			this.panel1.Controls.Add(this.txtRazon);
+			this.panel1.Controls.Add(this.txtCi);
+			this.panel1.Controls.Add(this.txtNombre);
 			this.panel1.Controls.Add(this.label5);
 			this.panel1.Controls.Add(this.label4);
 			this.panel1.Controls.Add(this.label3);
@@ -77,6 +78,7 @@ namespace proyectoFarmacia_v1
 			// panel2
 			// 
 			this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.panel2.Controls.Add(this.btnLimpiar);
 			this.panel2.Controls.Add(this.button5);
 			this.panel2.Controls.Add(this.button4);
 			this.panel2.Controls.Add(this.button3);
@@ -148,92 +150,62 @@ namespace proyectoFarmacia_v1
 			this.label5.TabIndex = 4;
 			this.label5.Text = "TELEFONO";
 			// 
-			// textBox1
+			// txtNombre
 			// 
-			this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(39)))), ((int)(((byte)(48)))));
-			this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-			this.textBox1.Location = new System.Drawing.Point(130, 71);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(213, 13);
-			this.textBox1.TabIndex = 5;
+			this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(39)))), ((int)(((byte)(48)))));
+			this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.txtNombre.ForeColor = System.Drawing.SystemColors.Window;
+			this.txtNombre.Location = new System.Drawing.Point(130, 71);
+			this.txtNombre.Name = "txtNombre";
+			this.txtNombre.Size = new System.Drawing.Size(213, 13);
+			this.txtNombre.TabIndex = 5;
 			// 
-			// textBox2
+			// txtCi
 			// 
-			this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(39)))), ((int)(((byte)(48)))));
-			this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
-			this.textBox2.Location = new System.Drawing.Point(130, 112);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(213, 13);
-			this.textBox2.TabIndex = 6;
+			this.txtCi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(39)))), ((int)(((byte)(48)))));
+			this.txtCi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.txtCi.ForeColor = System.Drawing.SystemColors.Window;
+			this.txtCi.Location = new System.Drawing.Point(130, 112);
+			this.txtCi.Name = "txtCi";
+			this.txtCi.Size = new System.Drawing.Size(213, 13);
+			this.txtCi.TabIndex = 6;
 			// 
-			// textBox3
+			// txtRazon
 			// 
-			this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(39)))), ((int)(((byte)(48)))));
-			this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.textBox3.ForeColor = System.Drawing.SystemColors.Window;
-			this.textBox3.Location = new System.Drawing.Point(130, 154);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(213, 13);
-			this.textBox3.TabIndex = 7;
+			this.txtRazon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(39)))), ((int)(((byte)(48)))));
+			this.txtRazon.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.txtRazon.ForeColor = System.Drawing.SystemColors.Window;
+			this.txtRazon.Location = new System.Drawing.Point(130, 154);
+			this.txtRazon.Name = "txtRazon";
+			this.txtRazon.Size = new System.Drawing.Size(213, 13);
+			this.txtRazon.TabIndex = 7;
 			// 
-			// textBox4
+			// txtMail
 			// 
-			this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(39)))), ((int)(((byte)(48)))));
-			this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.textBox4.ForeColor = System.Drawing.SystemColors.Window;
-			this.textBox4.Location = new System.Drawing.Point(130, 197);
-			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(213, 13);
-			this.textBox4.TabIndex = 8;
+			this.txtMail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(39)))), ((int)(((byte)(48)))));
+			this.txtMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.txtMail.ForeColor = System.Drawing.SystemColors.Window;
+			this.txtMail.Location = new System.Drawing.Point(130, 197);
+			this.txtMail.Name = "txtMail";
+			this.txtMail.Size = new System.Drawing.Size(213, 13);
+			this.txtMail.TabIndex = 8;
 			// 
-			// textBox5
+			// txtTelf
 			// 
-			this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(39)))), ((int)(((byte)(48)))));
-			this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.textBox5.ForeColor = System.Drawing.SystemColors.Window;
-			this.textBox5.Location = new System.Drawing.Point(130, 244);
-			this.textBox5.Name = "textBox5";
-			this.textBox5.Size = new System.Drawing.Size(213, 13);
-			this.textBox5.TabIndex = 9;
+			this.txtTelf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(39)))), ((int)(((byte)(48)))));
+			this.txtTelf.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.txtTelf.ForeColor = System.Drawing.SystemColors.Window;
+			this.txtTelf.Location = new System.Drawing.Point(130, 244);
+			this.txtTelf.Name = "txtTelf";
+			this.txtTelf.Size = new System.Drawing.Size(213, 13);
+			this.txtTelf.TabIndex = 9;
 			// 
-			// textBox6
+			// txtBusqueda
 			// 
-			this.textBox6.Location = new System.Drawing.Point(384, 16);
-			this.textBox6.Name = "textBox6";
-			this.textBox6.Size = new System.Drawing.Size(125, 20);
-			this.textBox6.TabIndex = 10;
-			// 
-			// button4
-			// 
-			this.button4.BackColor = System.Drawing.Color.CadetBlue;
-			this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button4.Image = global::proyectoFarmacia_v1.Properties.Resources.editfile_99747;
-			this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button4.Location = new System.Drawing.Point(30, 110);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(121, 42);
-			this.button4.TabIndex = 1;
-			this.button4.Text = "MODIFICAR";
-			this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.button4.UseVisualStyleBackColor = false;
-			// 
-			// button5
-			// 
-			this.button5.BackColor = System.Drawing.Color.Brown;
-			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button5.Image = global::proyectoFarmacia_v1.Properties.Resources.cancelbutton_99626;
-			this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button5.Location = new System.Drawing.Point(30, 179);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(121, 44);
-			this.button5.TabIndex = 2;
-			this.button5.Text = "ELIMINAR";
-			this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.button5.UseVisualStyleBackColor = false;
+			this.txtBusqueda.Location = new System.Drawing.Point(384, 16);
+			this.txtBusqueda.Name = "txtBusqueda";
+			this.txtBusqueda.Size = new System.Drawing.Size(125, 20);
+			this.txtBusqueda.TabIndex = 10;
 			// 
 			// dataGridView1
 			// 
@@ -254,6 +226,52 @@ namespace proyectoFarmacia_v1
 			this.label6.TabIndex = 4;
 			this.label6.Text = "PÁGINA DE PROVEEDORES";
 			// 
+			// btnLimpiar
+			// 
+			this.btnLimpiar.BackColor = System.Drawing.Color.Peru;
+			this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnLimpiar.Image = global::proyectoFarmacia_v1.Properties.Resources.backspace_arrow_icon_icons_com_72865;
+			this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnLimpiar.Location = new System.Drawing.Point(30, 195);
+			this.btnLimpiar.Name = "btnLimpiar";
+			this.btnLimpiar.Size = new System.Drawing.Size(121, 44);
+			this.btnLimpiar.TabIndex = 3;
+			this.btnLimpiar.Text = "LIMPIAR";
+			this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnLimpiar.UseVisualStyleBackColor = false;
+			this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+			// 
+			// button5
+			// 
+			this.button5.BackColor = System.Drawing.Color.Brown;
+			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button5.Image = global::proyectoFarmacia_v1.Properties.Resources.cancelbutton_99626;
+			this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button5.Location = new System.Drawing.Point(30, 136);
+			this.button5.Name = "button5";
+			this.button5.Size = new System.Drawing.Size(121, 44);
+			this.button5.TabIndex = 2;
+			this.button5.Text = "ELIMINAR";
+			this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button5.UseVisualStyleBackColor = false;
+			// 
+			// button4
+			// 
+			this.button4.BackColor = System.Drawing.Color.CadetBlue;
+			this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button4.Image = global::proyectoFarmacia_v1.Properties.Resources.editfile_99747;
+			this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button4.Location = new System.Drawing.Point(30, 81);
+			this.button4.Name = "button4";
+			this.button4.Size = new System.Drawing.Size(121, 42);
+			this.button4.TabIndex = 1;
+			this.button4.Text = "MODIFICAR";
+			this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button4.UseVisualStyleBackColor = false;
+			// 
 			// button3
 			// 
 			this.button3.BackColor = System.Drawing.Color.DarkSeaGreen;
@@ -261,7 +279,7 @@ namespace proyectoFarmacia_v1
 			this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button3.Image = global::proyectoFarmacia_v1.Properties.Resources.addnewfile_99671;
 			this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button3.Location = new System.Drawing.Point(30, 36);
+			this.button3.Location = new System.Drawing.Point(30, 14);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(121, 46);
 			this.button3.TabIndex = 0;
@@ -306,12 +324,12 @@ namespace proyectoFarmacia_v1
 		#endregion
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.TextBox textBox6;
-		private System.Windows.Forms.TextBox textBox5;
-		private System.Windows.Forms.TextBox textBox4;
-		private System.Windows.Forms.TextBox textBox3;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.TextBox txtBusqueda;
+		private System.Windows.Forms.TextBox txtTelf;
+		private System.Windows.Forms.TextBox txtMail;
+		private System.Windows.Forms.TextBox txtRazon;
+		private System.Windows.Forms.TextBox txtCi;
+		private System.Windows.Forms.TextBox txtNombre;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
@@ -324,5 +342,6 @@ namespace proyectoFarmacia_v1
 		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.Button btnLimpiar;
 	}
 }

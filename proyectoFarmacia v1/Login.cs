@@ -37,12 +37,14 @@ namespace proyectoFarmacia_v1
 		{
 			if (log.Ingresar(txtUser.Text,txtPass.Text)==1)
 			{
+				MessageBox.Show("Bienvenido ADMINISTRADOR");
 				Principal admin = new Principal();
 				admin.ShowDialog();
 				this.Dispose();
 
 			}else if (log.Ingresar(txtUser.Text, txtPass.Text) == 2)
 			{
+				MessageBox.Show("Bienvenido USUARIO");
 				vistaUsuario user = new vistaUsuario();
 				user.ShowDialog();
 				this.Dispose();
