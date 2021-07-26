@@ -34,6 +34,8 @@ namespace proyectoFarmacia_v1
 			return tabla;
 		}
 
+
+
 		public int Ingresar(string us,string pwd)
 		{
 			string query = "SELECT * FROM tblLogin WHERE logUsuario='"+us+"' AND logPassword ='"+pwd+"';";

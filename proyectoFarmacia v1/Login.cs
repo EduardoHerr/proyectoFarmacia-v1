@@ -28,6 +28,11 @@ namespace proyectoFarmacia_v1
 			
 		}
 		
+		private void limpiar()
+		{
+			txtUser.Text = txtPass.Text = "";
+		}
+
 		private void inicioSesion()
 		{
 			if (log.Ingresar(txtUser.Text,txtPass.Text)==1)
@@ -76,6 +81,7 @@ namespace proyectoFarmacia_v1
 				{
 					inicioSesion();
 					intentos = 3;
+					limpiar();
 				}
 			}
 			
