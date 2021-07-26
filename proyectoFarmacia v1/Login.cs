@@ -42,14 +42,30 @@ namespace proyectoFarmacia_v1
 				this.Dispose();
 			}else if (log.Ingresar(txtUser.Text, txtPass.Text) == 2)
 			{
-				
+				vistaUsuario user = new vistaUsuario();
+				user.ShowDialog();
+				this.Dispose();
 			}
 			else
 			{
-
+				MessageBox.Show("Usuario o Clave Incorrecta");
+				limpiar();
+				intentos--;
+				lblIntentos.Text = "Intentos " + intentos;
 			}
 		}
 
+		private void btnIngresa()
+		{
+			if (intentos!=0)
+			{
+				btnIngreso.Enabled = true;
+			}
+			else
+			{
+				btnIngreso.Enabled = false;
+			}
+		}
 		private void btnIngreso_Click(object sender, EventArgs e)
 		{
 			if (intentos!=0)
@@ -61,18 +77,21 @@ namespace proyectoFarmacia_v1
 						MessageBox.Show("Campos vacios ingrese datos porfavor");
 						intentos--;
 						lblIntentos.Text = "Intentos " + intentos;
+						btnIngresa();
 					}
 					else if (txtUser.Text.Equals(""))
 					{
 						MessageBox.Show("Campo Usuario vacio Ingrese porfavor");
 						intentos--;
 						lblIntentos.Text = "Intentos " + intentos;
+						btnIngresa();
 					}
 					else
 					{
 						MessageBox.Show("Campo Contraseña vacio Ingrese porfavor");
 						intentos--;
 						lblIntentos.Text = "Intentos " + intentos;
+						btnIngresa();
 					}
 				}
 				else
@@ -82,18 +101,20 @@ namespace proyectoFarmacia_v1
 						MessageBox.Show("Se ha Ingresado más de 16 digitos en la contraseña");
 						intentos--;
 						lblIntentos.Text = "Intentos " + intentos;
+						btnIngresa();
 					}
 					else
 					{
 						inicioSesion();
 						intentos = 3;
 						limpiar();
+						btnIngresa();
 					}
 				}
 			}
 			else
 			{
-				btnIngreso.Enabled = false;
+				btnIngresa();
 			}
 			
 			

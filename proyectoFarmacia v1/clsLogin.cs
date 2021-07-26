@@ -16,23 +16,23 @@ namespace proyectoFarmacia_v1
 		dbConexion con = new dbConexion();
 
 		//Propiedades
-		SqlDataReader leer;
+	
 		DataTable tabla = new DataTable();
 		SqlCommand cmd = new SqlCommand();
 
 		//CRUD
-
+		/*
 		public DataTable Mostrar()
 		{
 			cmd.Connection = con.abrirConexion();
 			cmd.CommandText = "loginMostrar";
 			cmd.CommandType = CommandType.StoredProcedure;
-			leer = cmd.ExecuteReader();
+			SqlDataReader leer = cmd.ExecuteReader();
 			tabla.Load(leer);
 			con.cerrarConexion();
-
+			leer.Close();
 			return tabla;
-		}
+		}*/
 
 
 
@@ -42,7 +42,7 @@ namespace proyectoFarmacia_v1
 			con.abrirConexion();
 			SqlCommand command = new SqlCommand(query, con.con);
 
-			leer = command.ExecuteReader();
+			SqlDataReader leer = command.ExecuteReader();
 
 			while (leer.Read())
 			{
@@ -70,7 +70,8 @@ namespace proyectoFarmacia_v1
 				}
 			}
 
-
+			con.cerrarConexion();
+			leer.Close();
 			return rol;
 		}
 
