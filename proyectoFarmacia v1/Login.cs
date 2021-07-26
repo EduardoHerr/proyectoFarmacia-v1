@@ -12,6 +12,7 @@ namespace proyectoFarmacia_v1
 {
 	public partial class Login : Form
 	{
+		int intentos = 3;
 		//Instanciar
 		clsLogin log = new clsLogin();
 
@@ -31,10 +32,12 @@ namespace proyectoFarmacia_v1
 		{
 			if (log.Ingresar(txtUser.Text,txtPass.Text)==1)
 			{
-
+				Principal admin = new Principal();
+				admin.ShowDialog();
+				this.Dispose();
 			}else if (log.Ingresar(txtUser.Text, txtPass.Text) == 2)
 			{
-
+				
 			}
 			else
 			{
@@ -44,7 +47,38 @@ namespace proyectoFarmacia_v1
 
 		private void btnIngreso_Click(object sender, EventArgs e)
 		{
-
+			if (txtUser.Text.Equals("") || txtPass.Text.Equals(""))
+			{
+				if (txtUser.Text.Equals("") && txtPass.Text.Equals(""))
+				{
+					MessageBox.Show("Campos vacios ingrese datos porfavor");
+					intentos--;
+				}
+				else if (txtUser.Text.Equals(""))
+				{
+					MessageBox.Show("Campo Usuario vacio Ingrese porfavor");
+					intentos--;
+				}
+				else
+				{
+					MessageBox.Show("Campo Contraseña vacio Ingrese porfavor");
+					intentos--;
+				}
+			}
+			else
+			{
+				if (txtPass.Text.Length>16)
+				{
+					MessageBox.Show("Se ha Ingresado más de 16 digitos en la contraseña");
+					intentos--;
+				}
+				else
+				{
+					inicioSesion();
+					intentos = 3;
+				}
+			}
+			
 		}
 	}
 }
