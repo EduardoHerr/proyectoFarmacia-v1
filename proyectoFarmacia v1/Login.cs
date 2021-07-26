@@ -12,7 +12,7 @@ namespace proyectoFarmacia_v1
 {
 	public partial class Login : Form
 	{
-		int intentos = 3;
+		static int intentos = 3;
 		//Instanciar
 		clsLogin log = new clsLogin();
 
@@ -52,38 +52,50 @@ namespace proyectoFarmacia_v1
 
 		private void btnIngreso_Click(object sender, EventArgs e)
 		{
-			if (txtUser.Text.Equals("") || txtPass.Text.Equals(""))
+			if (intentos!=0)
 			{
-				if (txtUser.Text.Equals("") && txtPass.Text.Equals(""))
+				if (txtUser.Text.Equals("") || txtPass.Text.Equals(""))
 				{
-					MessageBox.Show("Campos vacios ingrese datos porfavor");
-					intentos--;
-				}
-				else if (txtUser.Text.Equals(""))
-				{
-					MessageBox.Show("Campo Usuario vacio Ingrese porfavor");
-					intentos--;
+					if (txtUser.Text.Equals("") && txtPass.Text.Equals(""))
+					{
+						MessageBox.Show("Campos vacios ingrese datos porfavor");
+						intentos--;
+						lblIntentos.Text = "Intentos " + intentos;
+					}
+					else if (txtUser.Text.Equals(""))
+					{
+						MessageBox.Show("Campo Usuario vacio Ingrese porfavor");
+						intentos--;
+						lblIntentos.Text = "Intentos " + intentos;
+					}
+					else
+					{
+						MessageBox.Show("Campo Contraseña vacio Ingrese porfavor");
+						intentos--;
+						lblIntentos.Text = "Intentos " + intentos;
+					}
 				}
 				else
 				{
-					MessageBox.Show("Campo Contraseña vacio Ingrese porfavor");
-					intentos--;
+					if (txtPass.Text.Length > 16)
+					{
+						MessageBox.Show("Se ha Ingresado más de 16 digitos en la contraseña");
+						intentos--;
+						lblIntentos.Text = "Intentos " + intentos;
+					}
+					else
+					{
+						inicioSesion();
+						intentos = 3;
+						limpiar();
+					}
 				}
 			}
 			else
 			{
-				if (txtPass.Text.Length>16)
-				{
-					MessageBox.Show("Se ha Ingresado más de 16 digitos en la contraseña");
-					intentos--;
-				}
-				else
-				{
-					inicioSesion();
-					intentos = 3;
-					limpiar();
-				}
+				btnIngreso.Enabled = false;
 			}
+			
 			
 		}
 	}
