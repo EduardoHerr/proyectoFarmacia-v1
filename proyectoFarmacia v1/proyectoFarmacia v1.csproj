@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsLogin.cs" />
+    <Compile Include="dbConexion.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +73,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -84,6 +87,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\49462.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_entrance_in_internet_log_login_security_icon_127060.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\internet_lock_locked_padlock_password_secure_security_icon_127100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_password_icon_142997.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_avatar_face_man_people_profile_user_icon_123197.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
