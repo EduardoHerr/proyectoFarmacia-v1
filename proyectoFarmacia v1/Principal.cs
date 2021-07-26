@@ -16,5 +16,40 @@ namespace proyectoFarmacia_v1
 		{
 			InitializeComponent();
 		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnSalir_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
+
+		private void btnReportes_Click(object sender, EventArgs e)
+		{
+			pnlReportes.Visible = true;
+		}
+
+		private void btnrVentas_Click(object sender, EventArgs e)
+		{
+			pnlReportes.Visible = false;
+		}
+
+		private void btnrCompras_Click(object sender, EventArgs e)
+		{
+			pnlReportes.Visible = false;
+		}
+
+		private void btnrPagos_Click(object sender, EventArgs e)
+		{
+			pnlReportes.Visible = false;
+		}
+
+		private void Principal_Load(object sender, EventArgs e)
+		{
+			pnlReportes.Visible = false;
+		}
 	}
 }

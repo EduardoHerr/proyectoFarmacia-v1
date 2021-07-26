@@ -63,6 +63,16 @@ namespace proyectoFarmacia_v1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1486564180_finance_financial_report_81493 {
+            get {
+                object obj = ResourceManager.GetObject("1486564180-finance-financial-report_81493", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _49462 {
             get {
                 object obj = ResourceManager.GetObject("49462", resourceCulture);
@@ -83,9 +93,69 @@ namespace proyectoFarmacia_v1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add {
+            get {
+                object obj = ResourceManager.GetObject("add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap arrow_entrance_in_internet_log_login_security_icon_127060 {
             get {
                 object obj = ResourceManager.GetObject("arrow_entrance_in_internet_log_login_security_icon_127060", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap broker {
+            get {
+                object obj = ResourceManager.GetObject("broker", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap croupier {
+            get {
+                object obj = ResourceManager.GetObject("croupier", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delivery_man {
+            get {
+                object obj = ResourceManager.GetObject("delivery-man", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap disable_remove_delete_exit_close_11881 {
+            get {
+                object obj = ResourceManager.GetObject("disable_remove_delete_exit_close_11881", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfindercashiersaleshop4177567_115971_115944 {
+            get {
+                object obj = ResourceManager.GetObject("iconfindercashiersaleshop4177567-115971_115944", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +176,26 @@ namespace proyectoFarmacia_v1.Properties {
         internal static System.Drawing.Bitmap key_password_icon_142997 {
             get {
                 object obj = ResourceManager.GetObject("key_password_icon_142997", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap medicine_2_icon_icons_com_66043 {
+            get {
+                object obj = ResourceManager.GetObject("medicine-2_icon-icons.com_66043", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap medicine_pills_drugs_icon_149284 {
+            get {
+                object obj = ResourceManager.GetObject("medicine_pills_drugs_icon_149284", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

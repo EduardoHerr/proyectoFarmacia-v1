@@ -117,47 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="croupier" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\croupier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1486564180-finance-financial-report_81493" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1486564180-finance-financial-report_81493.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="key_password_icon_142997" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\key_password_icon_142997.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="medicine_pills_drugs_icon_149284" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\medicine_pills_drugs_icon_149284.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="account_avatar_face_man_people_profile_user_icon_123197" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\account_avatar_face_man_people_profile_user_icon_123197.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="internet_lock_locked_padlock_password_secure_security_icon_127100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\internet_lock_locked_padlock_password_secure_security_icon_127100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="medicine-2_icon-icons.com_66043" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\medicine-2_icon-icons.com_66043.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="broker" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\broker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconfindercashiersaleshop4177567-115971_115944" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfindercashiersaleshop4177567-115971_115944.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="49462" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\49462.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delivery-man" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delivery-man.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow_entrance_in_internet_log_login_security_icon_127060" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow_entrance_in_internet_log_login_security_icon_127060.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="disable_remove_delete_exit_close_11881" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\disable_remove_delete_exit_close_11881.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>
