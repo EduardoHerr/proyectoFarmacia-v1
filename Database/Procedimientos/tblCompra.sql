@@ -1,0 +1,52 @@
+--create proc compraMostrar
+--as
+--begin
+--SELECT * FROM tblCompra
+--end
+---------------------------------------------------
+
+--create proc compraMostrarxID
+--@Id int
+--as
+--begin
+--SELECT * FROM tblCompra WHERE idCompra = @Id 
+--end
+------------------------------------------------------
+
+--create proc compraRegistrar
+--@idProvee int,
+--@idProd int,
+--@cod varchar(10),
+--@corr varchar(50),
+--@mail varchar(45),
+--@telf varchar(10),
+--@prod varchar(45),
+--@cant int
+--as
+--begin
+--INSERT INTO tblCompra VALUES (@idProvee,@idProd,@cod,@corr,@mail,@telf,@prod,@cant)
+--end
+--------------------------------------------------------------------------
+
+create proc compraActualizar
+----@idProvee int,
+----@idProd int,
+----@cod varchar(10),
+--@corr varchar(50),
+--@mail varchar(45),
+--@telf varchar(10),
+--@prod varchar(45),
+--@cant int,
+--@Id int
+--as
+--begin
+--UPDATE tblCompra SET comCorresponsal=@corr,comEmailCorresponsal=@mail,comTelfCorresponsal=@telf,codCompra=@telf,comCantidad=@cant WHERE idCompra=@Id
+--end
+-----------------------------------------------------------------------------------------------------------------------------
+
+--create proc compraEliminar
+--@id int
+--as
+--begin
+--Delete from tblCompra where idCompra = @id
+--end

@@ -1,0 +1,42 @@
+--create proc proveedorMostrar
+--as
+--begin
+--SELECT * FROM tblProveedor
+--end
+----------------------------------------------
+--create proc proveedorMostrarxID
+--@Id int
+--as
+--begin
+--SELECT * FROM tblProveedor WHERE idProveedor = @Id
+--end
+-------------------------------------------------------
+--create proc proveedorRegistrar
+--@nom varchar(50),
+--@ci varchar(15),
+--@razon varchar(50),
+--@mail varchar(75),
+--@telf int
+--as
+--begin
+--INSERT INTO tblProveedor VALUES (@nom,@ci,@razon,@mail,@telf)
+--end
+-------------------------------------------------------------
+--create proc proveedorActualizar
+--@nom varchar(50),
+--@ci varchar(15),
+--@razon varchar(50),
+--@mail varchar(75),
+--@telf int,
+--@Id int
+--as 
+--begin
+--UPDATE tblProveedor SET provNombreEmpresa=@nom,provCi=@ci,provRazonSocial=@razon,provCorreo=@mail,provTelefono=@telf WHERE idProveedor=@Id
+--end
+------------------------------------------------------------------------------
+--create proc proveedorEliminar
+--@Id int
+--as
+--begin
+--DELETE FROM tblProveedor WHERE idProveedor=@Id
+--end
