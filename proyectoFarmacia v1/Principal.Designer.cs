@@ -300,6 +300,7 @@ namespace proyectoFarmacia_v1
 			// 
 			// btnVenta
 			// 
+			this.btnVenta.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnVenta.FlatAppearance.BorderSize = 0;
 			this.btnVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
 			this.btnVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -313,9 +314,11 @@ namespace proyectoFarmacia_v1
 			this.btnVenta.TabIndex = 13;
 			this.btnVenta.Text = "VENTAS";
 			this.btnVenta.UseVisualStyleBackColor = true;
+			this.btnVenta.Click += new System.EventHandler(this.btnVenta_Click);
 			// 
 			// btnCompra
 			// 
+			this.btnCompra.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnCompra.FlatAppearance.BorderSize = 0;
 			this.btnCompra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
 			this.btnCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -333,6 +336,7 @@ namespace proyectoFarmacia_v1
 			// 
 			// btnProveedor
 			// 
+			this.btnProveedor.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnProveedor.FlatAppearance.BorderSize = 0;
 			this.btnProveedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
 			this.btnProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
