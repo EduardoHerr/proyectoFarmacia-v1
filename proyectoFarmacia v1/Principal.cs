@@ -29,7 +29,12 @@ namespace proyectoFarmacia_v1
 
 		private void btnReportes_Click(object sender, EventArgs e)
 		{
-			pnlReportes.Visible = true;
+			
+			
+				pnlReportes.Visible = true;
+			
+				
+			
 		}
 
 		private void btnrVentas_Click(object sender, EventArgs e)
@@ -67,7 +72,7 @@ namespace proyectoFarmacia_v1
 
 		private void btnBodega_Click(object sender, EventArgs e)
 		{
-			
+			abrirForms(new adBodega());
 		}
 
 		private void btnProveedor_Click(object sender, EventArgs e)
@@ -78,11 +83,17 @@ namespace proyectoFarmacia_v1
 		private void pictureBox1_Click(object sender, EventArgs e)
 		{
 			abrirForms(new fechaHora());
+			pnlReportes.Visible = false;
 		}
 
 		private void btnUsuario_Click(object sender, EventArgs e)
 		{
 			abrirForms(new adLogin());
+		}
+
+		private void btnCompra_Click(object sender, EventArgs e)
+		{
+			abrirForms(new adCompra());
 		}
 	}
 }

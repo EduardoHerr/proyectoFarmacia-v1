@@ -37,23 +37,23 @@ namespace proyectoFarmacia_v1
 			this.panel12 = new System.Windows.Forms.Panel();
 			this.btnrVentas = new System.Windows.Forms.Button();
 			this.panel11 = new System.Windows.Forms.Panel();
-			this.btnSalir = new System.Windows.Forms.Button();
-			this.btnReportes = new System.Windows.Forms.Button();
 			this.panel9 = new System.Windows.Forms.Panel();
-			this.btnCliente = new System.Windows.Forms.Button();
 			this.panel7 = new System.Windows.Forms.Panel();
 			this.panel8 = new System.Windows.Forms.Panel();
-			this.btnUsuario = new System.Windows.Forms.Button();
-			this.btnVenta = new System.Windows.Forms.Button();
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.panel6 = new System.Windows.Forms.Panel();
-			this.btnCompra = new System.Windows.Forms.Button();
-			this.btnProveedor = new System.Windows.Forms.Button();
 			this.panel4 = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
+			this.panelPrincipal = new System.Windows.Forms.Panel();
+			this.btnSalir = new System.Windows.Forms.Button();
+			this.btnReportes = new System.Windows.Forms.Button();
+			this.btnCliente = new System.Windows.Forms.Button();
+			this.btnUsuario = new System.Windows.Forms.Button();
+			this.btnVenta = new System.Windows.Forms.Button();
+			this.btnCompra = new System.Windows.Forms.Button();
+			this.btnProveedor = new System.Windows.Forms.Button();
 			this.btnBodega = new System.Windows.Forms.Button();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.panelPrincipal = new System.Windows.Forms.Panel();
 			this.panel1.SuspendLayout();
 			this.pnlReportes.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -170,6 +170,71 @@ namespace proyectoFarmacia_v1
 			this.panel11.Size = new System.Drawing.Size(10, 32);
 			this.panel11.TabIndex = 22;
 			// 
+			// panel9
+			// 
+			this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+			this.panel9.Location = new System.Drawing.Point(0, 358);
+			this.panel9.Name = "panel9";
+			this.panel9.Size = new System.Drawing.Size(5, 32);
+			this.panel9.TabIndex = 18;
+			// 
+			// panel7
+			// 
+			this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+			this.panel7.Location = new System.Drawing.Point(0, 320);
+			this.panel7.Name = "panel7";
+			this.panel7.Size = new System.Drawing.Size(5, 32);
+			this.panel7.TabIndex = 16;
+			// 
+			// panel8
+			// 
+			this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+			this.panel8.Location = new System.Drawing.Point(0, 282);
+			this.panel8.Name = "panel8";
+			this.panel8.Size = new System.Drawing.Size(5, 32);
+			this.panel8.TabIndex = 15;
+			// 
+			// panel5
+			// 
+			this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+			this.panel5.Location = new System.Drawing.Point(0, 244);
+			this.panel5.Name = "panel5";
+			this.panel5.Size = new System.Drawing.Size(5, 32);
+			this.panel5.TabIndex = 12;
+			// 
+			// panel6
+			// 
+			this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+			this.panel6.Location = new System.Drawing.Point(0, 206);
+			this.panel6.Name = "panel6";
+			this.panel6.Size = new System.Drawing.Size(5, 32);
+			this.panel6.TabIndex = 11;
+			// 
+			// panel4
+			// 
+			this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+			this.panel4.Location = new System.Drawing.Point(0, 168);
+			this.panel4.Name = "panel4";
+			this.panel4.Size = new System.Drawing.Size(5, 32);
+			this.panel4.TabIndex = 8;
+			// 
+			// panel3
+			// 
+			this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+			this.panel3.Location = new System.Drawing.Point(0, 130);
+			this.panel3.Name = "panel3";
+			this.panel3.Size = new System.Drawing.Size(5, 32);
+			this.panel3.TabIndex = 7;
+			// 
+			// panelPrincipal
+			// 
+			this.panelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+			this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panelPrincipal.Location = new System.Drawing.Point(204, 0);
+			this.panelPrincipal.Name = "panelPrincipal";
+			this.panelPrincipal.Size = new System.Drawing.Size(780, 585);
+			this.panelPrincipal.TabIndex = 1;
+			// 
 			// btnSalir
 			// 
 			this.btnSalir.FlatAppearance.BorderSize = 0;
@@ -199,14 +264,6 @@ namespace proyectoFarmacia_v1
 			this.btnReportes.UseVisualStyleBackColor = true;
 			this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
 			// 
-			// panel9
-			// 
-			this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-			this.panel9.Location = new System.Drawing.Point(0, 358);
-			this.panel9.Name = "panel9";
-			this.panel9.Size = new System.Drawing.Size(5, 32);
-			this.panel9.TabIndex = 18;
-			// 
 			// btnCliente
 			// 
 			this.btnCliente.FlatAppearance.BorderSize = 0;
@@ -222,22 +279,6 @@ namespace proyectoFarmacia_v1
 			this.btnCliente.TabIndex = 17;
 			this.btnCliente.Text = "CLIENTES";
 			this.btnCliente.UseVisualStyleBackColor = true;
-			// 
-			// panel7
-			// 
-			this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-			this.panel7.Location = new System.Drawing.Point(0, 320);
-			this.panel7.Name = "panel7";
-			this.panel7.Size = new System.Drawing.Size(5, 32);
-			this.panel7.TabIndex = 16;
-			// 
-			// panel8
-			// 
-			this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-			this.panel8.Location = new System.Drawing.Point(0, 282);
-			this.panel8.Name = "panel8";
-			this.panel8.Size = new System.Drawing.Size(5, 32);
-			this.panel8.TabIndex = 15;
 			// 
 			// btnUsuario
 			// 
@@ -273,22 +314,6 @@ namespace proyectoFarmacia_v1
 			this.btnVenta.Text = "VENTAS";
 			this.btnVenta.UseVisualStyleBackColor = true;
 			// 
-			// panel5
-			// 
-			this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-			this.panel5.Location = new System.Drawing.Point(0, 244);
-			this.panel5.Name = "panel5";
-			this.panel5.Size = new System.Drawing.Size(5, 32);
-			this.panel5.TabIndex = 12;
-			// 
-			// panel6
-			// 
-			this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-			this.panel6.Location = new System.Drawing.Point(0, 206);
-			this.panel6.Name = "panel6";
-			this.panel6.Size = new System.Drawing.Size(5, 32);
-			this.panel6.TabIndex = 11;
-			// 
 			// btnCompra
 			// 
 			this.btnCompra.FlatAppearance.BorderSize = 0;
@@ -304,6 +329,7 @@ namespace proyectoFarmacia_v1
 			this.btnCompra.TabIndex = 10;
 			this.btnCompra.Text = "ADQUIRIR";
 			this.btnCompra.UseVisualStyleBackColor = true;
+			this.btnCompra.Click += new System.EventHandler(this.btnCompra_Click);
 			// 
 			// btnProveedor
 			// 
@@ -321,22 +347,6 @@ namespace proyectoFarmacia_v1
 			this.btnProveedor.Text = "PROVEEDOR";
 			this.btnProveedor.UseVisualStyleBackColor = true;
 			this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
-			// 
-			// panel4
-			// 
-			this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-			this.panel4.Location = new System.Drawing.Point(0, 168);
-			this.panel4.Name = "panel4";
-			this.panel4.Size = new System.Drawing.Size(5, 32);
-			this.panel4.TabIndex = 8;
-			// 
-			// panel3
-			// 
-			this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-			this.panel3.Location = new System.Drawing.Point(0, 130);
-			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(5, 32);
-			this.panel3.TabIndex = 7;
 			// 
 			// btnBodega
 			// 
@@ -366,15 +376,6 @@ namespace proyectoFarmacia_v1
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
 			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-			// 
-			// panelPrincipal
-			// 
-			this.panelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-			this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panelPrincipal.Location = new System.Drawing.Point(204, 0);
-			this.panelPrincipal.Name = "panelPrincipal";
-			this.panelPrincipal.Size = new System.Drawing.Size(780, 585);
-			this.panelPrincipal.TabIndex = 1;
 			// 
 			// Principal
 			// 
