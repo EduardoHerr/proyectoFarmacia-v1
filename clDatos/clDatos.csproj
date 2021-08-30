@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectDB.cs" />
+    <Compile Include="dbBodega.cs" />
     <Compile Include="dblogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

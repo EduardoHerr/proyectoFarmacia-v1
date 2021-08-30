@@ -7,14 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using clNegocio;
 
 namespace proyectoFarmacia_v1
 {
 	public partial class adBodega : Form
 	{
+		conBodega bodega = new conBodega();
+
 		public adBodega()
 		{
 			InitializeComponent();
+			listarProd();
+
 		}
+
+		private void listarProd()
+        {
+			dgvBodega.AutoGenerateColumns = false;
+			dgvBodega.DataSource = bodega.listarProd();
+        }
+
 	}
 }
