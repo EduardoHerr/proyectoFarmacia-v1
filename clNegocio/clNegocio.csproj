@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="conBodega.cs" />
     <Compile Include="conLogin.cs" />
+    <Compile Include="conUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
