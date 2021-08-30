@@ -12,7 +12,7 @@ namespace proyectoFarmacia_v1
 	class dbConexion
 	{
 		
-		 public SqlConnection con = new SqlConnection("Data Source=192.168.100.153;Initial Catalog=farmaciaVisual;Persist Security Info=True;User ID=sa;Password=123");
+		 public SqlConnection con = new SqlConnection("Data Source=localhost;Initial Catalog=farmaciaVisual;Persist Security Info=True;User ID=sa;Password=123");
 
 		//Abrir y cerrar nuestra conexion
 		public SqlConnection abrirConexion()
