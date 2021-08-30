@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using clNegocio;
 
 namespace proyectoFarmacia_v1
 {
@@ -14,7 +15,8 @@ namespace proyectoFarmacia_v1
 	{
 		static int intentos = 3;
 		//Instanciar
-		clsLogin log = new clsLogin();
+
+		conLogin log = new conLogin();
 
 		public Login()
 		{
@@ -35,6 +37,7 @@ namespace proyectoFarmacia_v1
 
 		private void inicioSesion()
 		{
+			
 			if (log.Ingresar(txtUser.Text,txtPass.Text)==1)
 			{
 				MessageBox.Show("Bienvenido ADMINISTRADOR");

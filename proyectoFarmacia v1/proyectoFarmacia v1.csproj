@@ -76,7 +76,6 @@
     <Compile Include="adVentas.Designer.cs">
       <DependentUpon>adVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="clsLogin.cs" />
     <Compile Include="dbConexion.cs" />
     <Compile Include="fechaHora.cs">
       <SubType>Form</SubType>
@@ -219,6 +218,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\backspace-arrow_icon-icons.com_72865.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\clNegocio\clNegocio.csproj">
+      <Project>{e8e78189-8221-4456-9add-32034d9a22cb}</Project>
+      <Name>clNegocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
