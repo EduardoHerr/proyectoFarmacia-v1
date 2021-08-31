@@ -38,20 +38,22 @@ namespace proyectoFarmacia_v1
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.txtVenta = new System.Windows.Forms.TextBox();
+            this.txtCompra = new System.Windows.Forms.TextBox();
+            this.txtPeso = new System.Windows.Forms.TextBox();
+            this.dtExpedicion = new System.Windows.Forms.DateTimePicker();
+            this.dtExpiracion = new System.Windows.Forms.DateTimePicker();
             this.dgvBodega = new System.Windows.Forms.DataGridView();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.imag = new System.Windows.Forms.PictureBox();
+            this.btnFoto = new System.Windows.Forms.Button();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Elaboracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +63,7 @@ namespace proyectoFarmacia_v1
             this.Venta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBodega)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imag)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -154,134 +157,68 @@ namespace proyectoFarmacia_v1
             this.label9.TabIndex = 8;
             this.label9.Text = "CANTIDAD:";
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(159, 75);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 20);
-            this.textBox1.TabIndex = 9;
+            this.txtNombre.Location = new System.Drawing.Point(159, 75);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(199, 20);
+            this.txtNombre.TabIndex = 9;
             // 
-            // textBox2
+            // txtMarca
             // 
-            this.textBox2.Location = new System.Drawing.Point(159, 111);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(199, 20);
-            this.textBox2.TabIndex = 10;
+            this.txtMarca.Location = new System.Drawing.Point(159, 111);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(199, 20);
+            this.txtMarca.TabIndex = 10;
             // 
-            // textBox5
+            // txtCantidad
             // 
-            this.textBox5.Location = new System.Drawing.Point(520, 183);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(179, 20);
-            this.textBox5.TabIndex = 16;
+            this.txtCantidad.Location = new System.Drawing.Point(520, 183);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(179, 20);
+            this.txtCantidad.TabIndex = 16;
             // 
-            // textBox6
+            // txtVenta
             // 
-            this.textBox6.Location = new System.Drawing.Point(520, 147);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(180, 20);
-            this.textBox6.TabIndex = 15;
+            this.txtVenta.Location = new System.Drawing.Point(520, 147);
+            this.txtVenta.Name = "txtVenta";
+            this.txtVenta.Size = new System.Drawing.Size(180, 20);
+            this.txtVenta.TabIndex = 15;
             // 
-            // textBox7
+            // txtCompra
             // 
-            this.textBox7.Location = new System.Drawing.Point(520, 115);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(179, 20);
-            this.textBox7.TabIndex = 14;
+            this.txtCompra.Location = new System.Drawing.Point(520, 115);
+            this.txtCompra.Name = "txtCompra";
+            this.txtCompra.Size = new System.Drawing.Size(179, 20);
+            this.txtCompra.TabIndex = 14;
             // 
-            // textBox8
+            // txtPeso
             // 
-            this.textBox8.Location = new System.Drawing.Point(520, 79);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(180, 20);
-            this.textBox8.TabIndex = 13;
+            this.txtPeso.Location = new System.Drawing.Point(520, 79);
+            this.txtPeso.Name = "txtPeso";
+            this.txtPeso.Size = new System.Drawing.Size(180, 20);
+            this.txtPeso.TabIndex = 13;
             // 
-            // dateTimePicker1
+            // dtExpedicion
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(159, 153);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(199, 20);
-            this.dateTimePicker1.TabIndex = 17;
+            this.dtExpedicion.Location = new System.Drawing.Point(159, 153);
+            this.dtExpedicion.Name = "dtExpedicion";
+            this.dtExpedicion.Size = new System.Drawing.Size(199, 20);
+            this.dtExpedicion.TabIndex = 17;
             // 
-            // dateTimePicker2
+            // dtExpiracion
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(159, 189);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(199, 20);
-            this.dateTimePicker2.TabIndex = 18;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::proyectoFarmacia_v1.Properties.Resources.addnewfile_99671;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(27, 248);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(121, 46);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "REGISTRAR";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.CadetBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = global::proyectoFarmacia_v1.Properties.Resources.editfile_99747;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(203, 250);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(121, 42);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "MODIFICAR";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Brown;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = global::proyectoFarmacia_v1.Properties.Resources.cancelbutton_99626;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(384, 248);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(121, 44);
-            this.button5.TabIndex = 21;
-            this.button5.Text = "ELIMINAR";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.Peru;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Image = global::proyectoFarmacia_v1.Properties.Resources.backspace_arrow_icon_icons_com_72865;
-            this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiar.Location = new System.Drawing.Point(564, 250);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(121, 44);
-            this.btnLimpiar.TabIndex = 22;
-            this.btnLimpiar.Text = "LIMPIAR";
-            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimpiar.UseVisualStyleBackColor = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(27, 313);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(138, 20);
-            this.textBox3.TabIndex = 23;
+            this.dtExpiracion.Location = new System.Drawing.Point(159, 189);
+            this.dtExpiracion.Name = "dtExpiracion";
+            this.dtExpiracion.Size = new System.Drawing.Size(199, 20);
+            this.dtExpiracion.TabIndex = 18;
             // 
             // dgvBodega
             // 
             this.dgvBodega.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBodega.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBodega.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
             this.Nombre,
             this.Marca,
             this.Elaboracion,
@@ -290,10 +227,101 @@ namespace proyectoFarmacia_v1
             this.Compra,
             this.Venta,
             this.Cantidad});
-            this.dgvBodega.Location = new System.Drawing.Point(27, 356);
+            this.dgvBodega.Location = new System.Drawing.Point(27, 418);
             this.dgvBodega.Name = "dgvBodega";
-            this.dgvBodega.Size = new System.Drawing.Size(713, 178);
+            this.dgvBodega.Size = new System.Drawing.Size(713, 116);
             this.dgvBodega.TabIndex = 24;
+            this.dgvBodega.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBodega_CellClick);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.Peru;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Image = global::proyectoFarmacia_v1.Properties.Resources.backspace_arrow_icon_icons_com_72865;
+            this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimpiar.Location = new System.Drawing.Point(564, 324);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(121, 44);
+            this.btnLimpiar.TabIndex = 22;
+            this.btnLimpiar.Text = "LIMPIAR";
+            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Brown;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Image = global::proyectoFarmacia_v1.Properties.Resources.cancelbutton_99626;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(384, 322);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(121, 44);
+            this.btnEliminar.TabIndex = 21;
+            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Image = global::proyectoFarmacia_v1.Properties.Resources.editfile_99747;
+            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificar.Location = new System.Drawing.Point(203, 324);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(121, 42);
+            this.btnModificar.TabIndex = 20;
+            this.btnModificar.Text = "MODIFICAR";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Image = global::proyectoFarmacia_v1.Properties.Resources.addnewfile_99671;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(27, 322);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(121, 46);
+            this.btnGuardar.TabIndex = 19;
+            this.btnGuardar.Text = "REGISTRAR";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // imag
+            // 
+            this.imag.Location = new System.Drawing.Point(355, 223);
+            this.imag.Name = "imag";
+            this.imag.Size = new System.Drawing.Size(100, 93);
+            this.imag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imag.TabIndex = 25;
+            this.imag.TabStop = false;
+            // 
+            // btnFoto
+            // 
+            this.btnFoto.Location = new System.Drawing.Point(240, 264);
+            this.btnFoto.Name = "btnFoto";
+            this.btnFoto.Size = new System.Drawing.Size(75, 23);
+            this.btnFoto.TabIndex = 26;
+            this.btnFoto.Text = "Foto";
+            this.btnFoto.UseVisualStyleBackColor = true;
+            this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "idProducto";
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Visible = false;
             // 
             // Nombre
             // 
@@ -349,20 +377,21 @@ namespace proyectoFarmacia_v1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(764, 546);
+            this.Controls.Add(this.btnFoto);
+            this.Controls.Add(this.imag);
             this.Controls.Add(this.dgvBodega);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.btnLimpiar);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.dtExpiracion);
+            this.Controls.Add(this.dtExpedicion);
+            this.Controls.Add(this.txtCantidad);
+            this.Controls.Add(this.txtVenta);
+            this.Controls.Add(this.txtCompra);
+            this.Controls.Add(this.txtPeso);
+            this.Controls.Add(this.txtMarca);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -376,6 +405,7 @@ namespace proyectoFarmacia_v1
             this.Name = "adBodega";
             this.Text = "adBodega";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBodega)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imag)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,20 +422,22 @@ namespace proyectoFarmacia_v1
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label9;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.TextBox textBox5;
-		private System.Windows.Forms.TextBox textBox6;
-		private System.Windows.Forms.TextBox textBox7;
-		private System.Windows.Forms.TextBox textBox8;
-		private System.Windows.Forms.DateTimePicker dateTimePicker1;
-		private System.Windows.Forms.DateTimePicker dateTimePicker2;
-		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.Button button4;
-		private System.Windows.Forms.Button button5;
+		private System.Windows.Forms.TextBox txtNombre;
+		private System.Windows.Forms.TextBox txtMarca;
+		private System.Windows.Forms.TextBox txtCantidad;
+		private System.Windows.Forms.TextBox txtVenta;
+		private System.Windows.Forms.TextBox txtCompra;
+		private System.Windows.Forms.TextBox txtPeso;
+		private System.Windows.Forms.DateTimePicker dtExpedicion;
+		private System.Windows.Forms.DateTimePicker dtExpiracion;
+		private System.Windows.Forms.Button btnGuardar;
+		private System.Windows.Forms.Button btnModificar;
+		private System.Windows.Forms.Button btnEliminar;
 		private System.Windows.Forms.Button btnLimpiar;
-		private System.Windows.Forms.TextBox textBox3;
 		private System.Windows.Forms.DataGridView dgvBodega;
+        private System.Windows.Forms.PictureBox imag;
+        private System.Windows.Forms.Button btnFoto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Elaboracion;

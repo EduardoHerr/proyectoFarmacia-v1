@@ -52,6 +52,12 @@
     <Compile Include="adBodega.Designer.cs">
       <DependentUpon>adBodega.cs</DependentUpon>
     </Compile>
+    <Compile Include="adCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adCliente.Designer.cs">
+      <DependentUpon>adCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="adCompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,12 @@
     <Compile Include="fechaHora.Designer.cs">
       <DependentUpon>fechaHora.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImgCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImgCompra.Designer.cs">
+      <DependentUpon>ImgCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +124,9 @@
     <EmbeddedResource Include="adBodega.resx">
       <DependentUpon>adBodega.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="adCliente.resx">
+      <DependentUpon>adCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adCompra.resx">
       <DependentUpon>adCompra.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fechaHora.resx">
       <DependentUpon>fechaHora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImgCompra.resx">
+      <DependentUpon>ImgCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

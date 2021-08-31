@@ -98,8 +98,13 @@ namespace proyectoFarmacia_v1
 
 		private void btnVenta_Click(object sender, EventArgs e)
 		{
-			abrirForms(new adVentas());
+			abrirForms(new ImgCompra());
 
 		}
-	}
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+			abrirForms(new adCliente());
+        }
+    }
 }

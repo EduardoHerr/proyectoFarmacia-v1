@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="conBodega.cs" />
+    <Compile Include="conCliente.cs" />
     <Compile Include="conLogin.cs" />
+    <Compile Include="conProds.cs" />
     <Compile Include="conUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
