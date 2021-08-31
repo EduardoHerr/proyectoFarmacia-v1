@@ -15,6 +15,7 @@ namespace proyectoFarmacia_v1
 		public Principal()
 		{
 			InitializeComponent();
+            
 		}
 
 		private void button2_Click(object sender, EventArgs e)

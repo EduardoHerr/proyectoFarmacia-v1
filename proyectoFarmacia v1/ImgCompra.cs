@@ -15,9 +15,10 @@ namespace proyectoFarmacia_v1
     public partial class ImgCompra : Form
     {
         conBodega bodega = new conBodega();
-        static int key = 0,cantidad=0;
+        static int key = 0,cantidad=0,costo=0;
         static double precio = 0;
-
+        static string nombrep;
+        List<string> datos = new List<string>();
 
         public ImgCompra()
         {
@@ -36,6 +37,7 @@ namespace proyectoFarmacia_v1
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 key = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Codigo"].Value.ToString());
+                nombrep = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
                 cantidad = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Cantidad"].Value.ToString());
                 precio = Convert.ToDouble(dataGridView1.CurrentRow.Cells["Costo"].Value.ToString());
                 DataTable dt = new DataTable();
@@ -122,15 +124,27 @@ namespace proyectoFarmacia_v1
                 MessageBox.Show("Error: " + ex);
             }
         }
+
+        private void btnLista_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridView row in dataGridView1.SelectedRows)
+            {
+                dataGridView2.Rows.Add(nombrep, precio, txtcantidad.Text);
+            }
+            
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (txtcantidad.Text!="")
             {
                 double cantidad = Convert.ToInt32(txtcantidad.Text);
 
-                cantidad *= precio;
+                
+                precio *= cantidad;
 
-                label2.Text = "El precio será de: " + cantidad;
+                label2.Text = "El precio será de: " + precio;
             }
             else
             {
