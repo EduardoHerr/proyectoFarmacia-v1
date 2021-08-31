@@ -16,6 +16,7 @@ namespace clDatos
         public int Loggeo(string user,string pwd)
         {
 			string query = "SELECT * FROM tblLogin WHERE logUsuario='" + user + "' AND logPassword ='" + pwd + "';";
+			
 			con.abrirConexion();
 			SqlCommand command = new SqlCommand(query, con.con);
 
@@ -54,6 +55,31 @@ namespace clDatos
 
 			
         }
+
+		public int loggeoCliente(int ced)
+        {
+			string query = "SELECT * FROM tblCliente WHERE cliCedula =" + ced + ";";
+			con.abrirConexion();
+			SqlCommand command = new SqlCommand(query, con.con);
+
+			SqlDataReader leer = command.ExecuteReader();
+            while (leer.Read())
+            {
+                if (leer["cliCedula"].ToString().Equals(ced.ToString()))
+                {
+					rol = 3;
+                }
+                else
+                {
+					rol = 0;
+                }
+            }
+		
+
+			con.cerrarConexion();
+			leer.Close();
+			return rol;
+		}
 
     }
 }

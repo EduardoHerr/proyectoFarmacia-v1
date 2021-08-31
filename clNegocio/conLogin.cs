@@ -17,5 +17,13 @@ namespace clNegocio
 
             return rol;
         }
+
+        public int IngresarCli(string ced)
+        {
+            int rol = dblog.loggeoCliente(Convert.ToInt32(ced));
+
+            return rol;
+        }
+
     }
 }

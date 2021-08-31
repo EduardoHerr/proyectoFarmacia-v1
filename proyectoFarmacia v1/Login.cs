@@ -13,11 +13,11 @@ namespace proyectoFarmacia_v1
 {
 	public partial class Login : Form
 	{
-		static int intentos = 3;
+		static int intentos = 3,rol=0;
 		//Instanciar
-
+		conCliente cli = new conCliente();
 		conLogin log = new conLogin();
-
+		static DataSet ds;
 		public Login()
 		{
 			InitializeComponent();
@@ -37,15 +37,16 @@ namespace proyectoFarmacia_v1
 
 		private void inicioSesion()
 		{
-			
-			if (log.Ingresar(txtUser.Text,txtPass.Text)==1)
+			rol = log.Ingresar(txtUser.Text, txtPass.Text);
+			if (rol==1)
 			{
 				MessageBox.Show("Bienvenido ADMINISTRADOR");
-				Principal admin = new Principal();
+				
+				Principal admin = new Principal(rol,null);
 				admin.ShowDialog();
 				this.Dispose();
 
-			}else if (log.Ingresar(txtUser.Text, txtPass.Text) == 2)
+			}else if (rol == 2)
 			{
 				MessageBox.Show("Bienvenido USUARIO");
 				vistaUsuario user = new vistaUsuario();
@@ -128,5 +129,24 @@ namespace proyectoFarmacia_v1
 			
 			
 		}
-	}
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            if (txtUser.Text == "")
+            {
+
+            }
+            else
+            {
+
+				rol = log.IngresarCli(txtUser.Text);
+				MessageBox.Show("Bienvenido CLIENTE");
+				ds = (DataSet)cli.nomCli(txtUser.Text);
+				string nom = ds.Tables[0].Rows[0]["cliNombre"].ToString();
+				Principal admin = new Principal(rol,nom);
+				admin.ShowDialog();
+				this.Dispose();
+			}
+        }
+    }
 }

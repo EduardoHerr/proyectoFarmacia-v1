@@ -18,5 +18,11 @@ namespace clNegocio
             return data;
         }
 
+        public object nomCli(string ced)
+        {
+            return cli.obtenerNombre(Convert.ToInt32(ced));
+        }
+
+
     }
 }

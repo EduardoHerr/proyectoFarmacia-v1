@@ -20,10 +20,11 @@ namespace proyectoFarmacia_v1
         static string nombrep;
         List<string> datos = new List<string>();
 
-        public ImgCompra()
+        public ImgCompra(string nom)
         {
             InitializeComponent();
             carga();
+            label3.Text = "Hola, Bienvenido:  " + nom;
         }
 
         private void carga()

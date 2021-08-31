@@ -28,5 +28,23 @@ namespace clDatos
             return da;
 
         }
+
+        public DataSet obtenerNombre(int ced)
+        {
+            string query = "SELECT * FROM tblCliente WHERE cliCedula=" + ced + ";";
+            db.abrirConexion();
+            SqlCommand cmd = new SqlCommand(query, db.con);
+
+            SqlDataAdapter sda = new SqlDataAdapter();
+            sda.SelectCommand = cmd;
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+
+            db.cerrarConexion();
+
+            return ds;
+        }
+
+
     }
 }

@@ -12,9 +12,38 @@ namespace proyectoFarmacia_v1
 {
 	public partial class Principal : Form
 	{
-		public Principal()
+		static string noom;
+		public Principal(int rol,string nom)
 		{
+			noom = nom;
 			InitializeComponent();
+            if (rol==3)
+            {
+				btnBodega.Visible = false;
+				btnProveedor.Visible = false;
+				btnCompra.Visible = false;
+				btnUsuario.Visible = false;
+				btnCliente.Visible = false;
+				panel4.Visible = false;
+				panel6.Visible = false;
+				panel3.Visible = false;
+				panel8.Visible = false;
+				panel7.Visible = false;
+
+			}
+            else
+            {
+				btnBodega.Visible = true;
+				btnProveedor.Visible = true;
+				btnCompra.Visible = true;
+				btnUsuario.Visible = true;
+				btnCliente.Visible = true;
+				panel4.Visible = true;
+				panel6.Visible = true;
+				panel3.Visible = true;
+				panel8.Visible = true;
+				panel7.Visible = true;
+			}
             
 		}
 
@@ -99,7 +128,7 @@ namespace proyectoFarmacia_v1
 
 		private void btnVenta_Click(object sender, EventArgs e)
 		{
-			abrirForms(new ImgCompra());
+			abrirForms(new ImgCompra(noom));
 
 		}
 
