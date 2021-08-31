@@ -11,7 +11,7 @@ namespace clDatos
    public  class dbBodega
    {
         ConnectDB con = new ConnectDB();
-
+        int ven = 0;
         public object ListarProd()
         {
             string query = "SELECT * FROM tblBodega";
@@ -42,6 +42,28 @@ namespace clDatos
             con.cerrarConexion();
 
             return tab;
+        }
+
+        public int Venta(int canti,int  id)
+        {
+            try
+            {
+                con.abrirConexion();
+                string query = "UPDATE tblBodega SET proCantidad = proCantidad - " + canti + "  WHERE idProducto = " + id + "";
+                SqlCommand cmd = new SqlCommand(query, con.con);
+                cmd.ExecuteNonQuery();
+                con.cerrarConexion();
+                ven = 1;
+            }
+            catch (Exception)
+            {
+
+                throw;
+                ven = 0;
+            }
+
+            return ven;
+
         }
         public string InsertarProducto(string nombre,string marca,DateTime crea,DateTime expe,double peso,double compra,double venta,int cantidad,byte[] xfoto)
         {

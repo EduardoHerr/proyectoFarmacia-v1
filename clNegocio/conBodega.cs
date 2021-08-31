@@ -47,5 +47,11 @@ namespace clNegocio
             return dbBodega.prodobtenerxId(key);
         }
 
+        public int Vent(string ven,int id)
+        {
+            return dbBodega.Venta(Convert.ToInt32(ven), id);
+
+        }
+
     }
 }
