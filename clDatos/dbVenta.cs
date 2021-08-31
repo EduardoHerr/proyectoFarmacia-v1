@@ -28,6 +28,22 @@ namespace clDatos
 
         }
 
+        public DataSet codVent(int id)
+        {
+            string query = "SELECT * FROM tblVenta WHERE idCliente=" + id + ";";
+            con.abrirConexion();
+            SqlCommand cmd = new SqlCommand(query, con.con);
+
+            SqlDataAdapter sda = new SqlDataAdapter();
+            sda.SelectCommand = cmd;
+            DataSet tab = new DataSet();
+            sda.Fill(tab);
+
+            con.cerrarConexion();
+
+            return tab;
+        }
+
         public void AgregarVenta(int cli,int prod,string ven,DateTime fecha,string nom,int cant,double pre)
         {
             try

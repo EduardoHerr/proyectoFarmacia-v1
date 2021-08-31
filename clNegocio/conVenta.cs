@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using clDatos;
+using System.Data;
 
 namespace clNegocio
 {
@@ -19,6 +20,11 @@ namespace clNegocio
         public void insertVenta(int cli, int prod, string ven, DateTime fecha, string nom, int cant, double pre)
         {
             vent.AgregarVenta(cli,prod,ven,fecha,nom,cant,pre);
+        }
+
+        public DataSet codVen(int id)
+        {
+            return vent.codVent(id);
         }
     }
 }

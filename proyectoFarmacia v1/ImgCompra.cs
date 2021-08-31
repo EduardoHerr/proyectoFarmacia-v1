@@ -22,7 +22,7 @@ namespace proyectoFarmacia_v1
         static string nombrep,codven;
         static DataSet ds;
         static DataTable dt;
-
+        static int  daat;
         public ImgCompra(DataSet nom)
         {
             ds = nom;
@@ -30,7 +30,8 @@ namespace proyectoFarmacia_v1
             label3.Text = "Hola, Bienvenido:  " + ds.Tables[0].Rows[0]["cliNombre"].ToString() ;
             id= Convert.ToInt32(ds.Tables[0].Rows[0]["idCliente"].ToString() );
             dt = (DataTable)ven.listaVen(id);
-            codven = dt.Rows[]["venCodigo"].ToString();
+            
+            codven = dt.Rows[0]["venCodigo"].ToString();
             codven = codven.Remove(0, 4);
             carga();
             
@@ -91,13 +92,29 @@ namespace proyectoFarmacia_v1
                     if (bodega.Vent(txtcantidad.Text, key) == 1)
                     {
                         MessageBox.Show("Venta Exitosa");
-                        int cod1 = Convert.ToInt32(codven);
-                        cod1++;
-                        codven = "VEN-" + cod1;
-                        ven.insertVenta(id, key,codven,DateTime.Now,nombrep,Convert.ToInt32(txtcantidad.Text),precio);
-                        carga();
-                        txtcantidad.Text = "";
-                        label2.Text = "El precio será de: ";
+                        if (codven.Length>2)
+                        {
+                            codven = codven.Remove(0, 4);
+                            int cod1 = Convert.ToInt32(codven);
+                            cod1++;
+                            codven = "VEN-" + cod1;
+                            ven.insertVenta(id, key, codven, DateTime.Now, nombrep, Convert.ToInt32(txtcantidad.Text), precio);
+                            carga();
+                            txtcantidad.Text = "";
+                            label2.Text = "El precio será de: ";
+                        }
+                        else
+                        {
+                            int cod1 = Convert.ToInt32(codven);
+                            cod1++;
+                            codven = "VEN-" + cod1;
+                            ven.insertVenta(id, key, codven, DateTime.Now, nombrep, Convert.ToInt32(txtcantidad.Text), precio);
+                            carga();
+                            txtcantidad.Text = "";
+                            label2.Text = "El precio será de: ";
+                        }
+                        
+                        
                     }
                     else
                     {
