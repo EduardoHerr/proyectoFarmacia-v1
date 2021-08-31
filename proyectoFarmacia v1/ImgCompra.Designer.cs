@@ -43,10 +43,15 @@ namespace proyectoFarmacia_v1
             this.txtcantidad = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.idVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodigoVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantidadTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -139,7 +144,7 @@ namespace proyectoFarmacia_v1
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(539, 241);
+            this.button1.Location = new System.Drawing.Point(559, 240);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 26);
             this.button1.TabIndex = 4;
@@ -152,9 +157,9 @@ namespace proyectoFarmacia_v1
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(630, 241);
+            this.button2.Location = new System.Drawing.Point(657, 241);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 29);
+            this.button2.Size = new System.Drawing.Size(91, 25);
             this.button2.TabIndex = 5;
             this.button2.Text = "Comprar";
             this.button2.UseVisualStyleBackColor = true;
@@ -183,28 +188,18 @@ namespace proyectoFarmacia_v1
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idVenta,
+            this.IdCliente,
+            this.idProducto,
             this.Producto,
+            this.CodigoVenta,
+            this.Fecha,
             this.PrecioTotal,
             this.CantidadTotal});
             this.dataGridView2.Location = new System.Drawing.Point(16, 3);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(410, 156);
+            this.dataGridView2.Size = new System.Drawing.Size(534, 156);
             this.dataGridView2.TabIndex = 0;
-            // 
-            // Producto
-            // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.Name = "Producto";
-            // 
-            // PrecioTotal
-            // 
-            this.PrecioTotal.HeaderText = "PrecioTotal";
-            this.PrecioTotal.Name = "PrecioTotal";
-            // 
-            // CantidadTotal
-            // 
-            this.CantidadTotal.HeaderText = "CantidadTotal";
-            this.CantidadTotal.Name = "CantidadTotal";
             // 
             // label3
             // 
@@ -216,6 +211,57 @@ namespace proyectoFarmacia_v1
             this.label3.Size = new System.Drawing.Size(93, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Hola,@user";
+            // 
+            // idVenta
+            // 
+            this.idVenta.DataPropertyName = "idVenta";
+            this.idVenta.HeaderText = "idVenta";
+            this.idVenta.Name = "idVenta";
+            this.idVenta.Visible = false;
+            // 
+            // IdCliente
+            // 
+            this.IdCliente.DataPropertyName = "idCliente";
+            this.IdCliente.HeaderText = "IdCliente";
+            this.IdCliente.Name = "IdCliente";
+            this.IdCliente.Visible = false;
+            // 
+            // idProducto
+            // 
+            this.idProducto.DataPropertyName = "idProducto";
+            this.idProducto.HeaderText = "idProducto";
+            this.idProducto.Name = "idProducto";
+            this.idProducto.Visible = false;
+            // 
+            // Producto
+            // 
+            this.Producto.DataPropertyName = "venProducto";
+            this.Producto.HeaderText = "Producto";
+            this.Producto.Name = "Producto";
+            // 
+            // CodigoVenta
+            // 
+            this.CodigoVenta.DataPropertyName = "venCodigo";
+            this.CodigoVenta.HeaderText = "CodigoVenta";
+            this.CodigoVenta.Name = "CodigoVenta";
+            // 
+            // Fecha
+            // 
+            this.Fecha.DataPropertyName = "venFechaHora";
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            // 
+            // PrecioTotal
+            // 
+            this.PrecioTotal.DataPropertyName = "venPrecioVenta";
+            this.PrecioTotal.HeaderText = "PrecioTotal";
+            this.PrecioTotal.Name = "PrecioTotal";
+            // 
+            // CantidadTotal
+            // 
+            this.CantidadTotal.DataPropertyName = "venCantidad";
+            this.CantidadTotal.HeaderText = "CantidadTotal";
+            this.CantidadTotal.Name = "CantidadTotal";
             // 
             // ImgCompra
             // 
@@ -260,9 +306,14 @@ namespace proyectoFarmacia_v1
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantidadTotal;
-        private System.Windows.Forms.Label label3;
     }
 }

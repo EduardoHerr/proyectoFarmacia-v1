@@ -12,8 +12,8 @@ namespace proyectoFarmacia_v1
 {
 	public partial class Principal : Form
 	{
-		static string noom;
-		public Principal(int rol,string nom)
+		static DataSet noom;
+		public Principal(int rol,DataSet nom)
 		{
 			noom = nom;
 			InitializeComponent();

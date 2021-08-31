@@ -46,6 +46,7 @@
     <Compile Include="conLogin.cs" />
     <Compile Include="conProds.cs" />
     <Compile Include="conUser.cs" />
+    <Compile Include="conVenta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

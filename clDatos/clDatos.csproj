@@ -50,6 +50,7 @@
     <Compile Include="dblogin.cs" />
     <Compile Include="dbProds.cs" />
     <Compile Include="dbUsuario.cs" />
+    <Compile Include="dbVenta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

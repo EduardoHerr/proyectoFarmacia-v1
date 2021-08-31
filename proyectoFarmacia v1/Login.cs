@@ -142,8 +142,8 @@ namespace proyectoFarmacia_v1
 				rol = log.IngresarCli(txtUser.Text);
 				MessageBox.Show("Bienvenido CLIENTE");
 				ds = (DataSet)cli.nomCli(txtUser.Text);
-				string nom = ds.Tables[0].Rows[0]["cliNombre"].ToString();
-				Principal admin = new Principal(rol,nom);
+				
+				Principal admin = new Principal(rol,ds);
 				admin.ShowDialog();
 				this.Dispose();
 			}
