@@ -12,6 +12,7 @@ namespace clDatos
    {
         ConnectDB con = new ConnectDB();
         int ven = 0;
+        static int eliminar = 0;
         public object ListarProd()
         {
             string query = "SELECT * FROM tblBodega";
@@ -128,12 +129,26 @@ namespace clDatos
             }
         }
 
-        public void Eliminar(int key)
+        public int Eliminar(int key)
         {
-            string query = "DELETE * FROM tblBodega WHERE idProducto="+key+";";
-            SqlCommand cmd = new SqlCommand(query, con.con);
+            try
+            {
+                string query = "DELETE FROM tblBodega WHERE idProducto=" + key + ";";
+                con.abrirConexion();
+                SqlCommand cmd = new SqlCommand(query, con.con);
 
-            cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
+                con.cerrarConexion();
+                eliminar = 1;
+            }
+            catch (Exception)
+            {
+
+               
+                eliminar = 0;
+            }
+
+            return eliminar;
         }
 
         public DataSet prodobtenerxId(int key)

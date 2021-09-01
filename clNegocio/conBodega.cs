@@ -31,9 +31,9 @@ namespace clNegocio
             return dbBodega.InsertarProducto(nombre,marca,crea,expe,peso,compra,venta,cantidad,xfoto);
 
         }
-        public void eliminarProd(int key)
+        public int eliminarProd(int key)
         {
-            dbBodega.Eliminar(key);
+            return dbBodega.Eliminar(key);
 
         }
         

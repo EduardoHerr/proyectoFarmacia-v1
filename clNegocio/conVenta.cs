@@ -22,9 +22,20 @@ namespace clNegocio
             vent.AgregarVenta(cli,prod,ven,fecha,nom,cant,pre);
         }
 
+        public DataTable list()
+        {
+            return vent.lisVen();
+        }
+
         public DataSet codVen(int id)
         {
             return vent.codVent(id);
         }
+
+        public void Eliminar(int key)
+        {
+            vent.Eliminar(key);
+        }
+
     }
 }

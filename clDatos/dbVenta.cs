@@ -28,6 +28,22 @@ namespace clDatos
 
         }
 
+        public DataTable lisVen()
+        {
+            string query = "Select * from tblVenta";
+            con.abrirConexion();
+            SqlCommand cmd = new SqlCommand(query, con.con);
+
+            SqlDataAdapter sda = new SqlDataAdapter();
+            sda.SelectCommand = cmd;
+            DataTable sd = new DataTable();
+            sda.Fill(sd);
+
+            con.cerrarConexion();
+
+            return sd;
+        }
+
         public DataSet codVent(int id)
         {
             string query = "SELECT * FROM tblVenta WHERE idCliente=" + id + ";";
@@ -71,6 +87,18 @@ namespace clDatos
             }
 
         }
+
+        public void Eliminar(int key)
+        {
+            string query = "Delete From tblVenta WHERE idVenta = " + key + ";";
+            con.abrirConexion();
+            SqlCommand cmd = new SqlCommand(query,con.con);
+
+            cmd.ExecuteNonQuery();
+
+            con.cerrarConexion();
+        }
+
 
     }
 }

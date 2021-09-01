@@ -13,8 +13,10 @@ namespace proyectoFarmacia_v1
 	public partial class Principal : Form
 	{
 		static DataSet noom;
+		static int roool=0;
 		public Principal(int rol,DataSet nom)
 		{
+			roool = rol;
 			noom = nom;
 			InitializeComponent();
             if (rol==3)
@@ -128,7 +130,14 @@ namespace proyectoFarmacia_v1
 
 		private void btnVenta_Click(object sender, EventArgs e)
 		{
-			abrirForms(new ImgCompra(noom));
+			if (roool != 3)
+			{
+				abrirForms(new adVentas());
+			}
+			else
+			{
+				abrirForms(new ImgCompra(noom));
+			}
 
 		}
 

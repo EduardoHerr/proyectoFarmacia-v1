@@ -125,9 +125,17 @@ namespace proyectoFarmacia_v1
             }
             else
             {
-                bodega.eliminarProd(key);
-                limpiar();
-                listarProd();
+                if (bodega.eliminarProd(key)==1)
+                {
+
+                    limpiar();
+                    listarProd();
+                }
+                else
+                {
+                    MessageBox.Show("No se puede eliminar ya que esta asociado a una venta");
+                }
+                
             }
         }
     }
