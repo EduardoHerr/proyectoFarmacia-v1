@@ -22,7 +22,7 @@ namespace proyectoFarmacia_v1
         static string nombrep,codven;
         static DataSet ds;
         static DataTable dt;
-        static int  daat;
+        
         public ImgCompra(DataSet nom)
         {
             ds = nom;
@@ -129,6 +129,21 @@ namespace proyectoFarmacia_v1
         {
             soloNumeros(e);
         }
+
+        private void txtReporte_Click(object sender, EventArgs e)
+        {
+            if (id == 0)
+            {
+                MessageBox.Show("Accion no valida");
+            }
+            else
+            {
+                ReporteVenta rep = new ReporteVenta(id);
+                rep.ShowDialog();
+                this.Dispose();
+            }
+        }
+
         public void soloNumeros(KeyPressEventArgs tecla)
         {
             try

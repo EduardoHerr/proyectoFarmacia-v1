@@ -43,7 +43,6 @@ namespace proyectoFarmacia_v1
             this.txtcantidad = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
             this.idVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +51,8 @@ namespace proyectoFarmacia_v1
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantidadTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtReporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -177,6 +178,7 @@ namespace proyectoFarmacia_v1
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtReporte);
             this.panel1.Controls.Add(this.dataGridView2);
             this.panel1.Location = new System.Drawing.Point(30, 276);
             this.panel1.Name = "panel1";
@@ -200,17 +202,6 @@ namespace proyectoFarmacia_v1
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(534, 156);
             this.dataGridView2.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(14, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 20);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Hola,@user";
             // 
             // idVenta
             // 
@@ -262,6 +253,29 @@ namespace proyectoFarmacia_v1
             this.CantidadTotal.DataPropertyName = "venCantidad";
             this.CantidadTotal.HeaderText = "CantidadTotal";
             this.CantidadTotal.Name = "CantidadTotal";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(14, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 20);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Hola,@user";
+            // 
+            // txtReporte
+            // 
+            this.txtReporte.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.txtReporte.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtReporte.Location = new System.Drawing.Point(595, 84);
+            this.txtReporte.Name = "txtReporte";
+            this.txtReporte.Size = new System.Drawing.Size(99, 27);
+            this.txtReporte.TabIndex = 1;
+            this.txtReporte.Text = "Generar Reporte";
+            this.txtReporte.UseVisualStyleBackColor = true;
+            this.txtReporte.Click += new System.EventHandler(this.txtReporte_Click);
             // 
             // ImgCompra
             // 
@@ -315,5 +329,6 @@ namespace proyectoFarmacia_v1
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantidadTotal;
+        private System.Windows.Forms.Button txtReporte;
     }
 }

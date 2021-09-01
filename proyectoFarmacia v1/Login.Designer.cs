@@ -32,6 +32,7 @@ namespace proyectoFarmacia_v1
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCliente = new System.Windows.Forms.Button();
             this.lblIntentos = new System.Windows.Forms.Label();
             this.btnIngreso = new System.Windows.Forms.Button();
             this.txtPass = new System.Windows.Forms.TextBox();
@@ -40,7 +41,6 @@ namespace proyectoFarmacia_v1
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnCliente = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,7 +51,6 @@ namespace proyectoFarmacia_v1
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(99)))), ((int)(((byte)(122)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnCliente);
-            this.panel1.Controls.Add(this.lblIntentos);
             this.panel1.Controls.Add(this.btnIngreso);
             this.panel1.Controls.Add(this.txtPass);
             this.panel1.Controls.Add(this.txtUser);
@@ -63,10 +62,20 @@ namespace proyectoFarmacia_v1
             this.panel1.Size = new System.Drawing.Size(335, 236);
             this.panel1.TabIndex = 0;
             // 
+            // btnCliente
+            // 
+            this.btnCliente.Location = new System.Drawing.Point(154, 204);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(111, 27);
+            this.btnCliente.TabIndex = 7;
+            this.btnCliente.Text = "Ingresar Cliente";
+            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
+            // 
             // lblIntentos
             // 
             this.lblIntentos.AutoSize = true;
-            this.lblIntentos.Location = new System.Drawing.Point(165, 216);
+            this.lblIntentos.Location = new System.Drawing.Point(169, 263);
             this.lblIntentos.Name = "lblIntentos";
             this.lblIntentos.Size = new System.Drawing.Size(0, 13);
             this.lblIntentos.TabIndex = 6;
@@ -74,9 +83,9 @@ namespace proyectoFarmacia_v1
             // btnIngreso
             // 
             this.btnIngreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnIngreso.Location = new System.Drawing.Point(84, 206);
+            this.btnIngreso.Location = new System.Drawing.Point(60, 204);
             this.btnIngreso.Name = "btnIngreso";
-            this.btnIngreso.Size = new System.Drawing.Size(75, 23);
+            this.btnIngreso.Size = new System.Drawing.Size(75, 27);
             this.btnIngreso.TabIndex = 5;
             this.btnIngreso.Text = "INGRESAR";
             this.btnIngreso.UseVisualStyleBackColor = false;
@@ -127,23 +136,14 @@ namespace proyectoFarmacia_v1
             this.label1.TabIndex = 0;
             this.label1.Text = "BIENVENIDO A FARMAWARE";
             // 
-            // btnCliente
-            // 
-            this.btnCliente.Location = new System.Drawing.Point(182, 206);
-            this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(111, 25);
-            this.btnCliente.TabIndex = 7;
-            this.btnCliente.Text = "Ingresar Cliente";
-            this.btnCliente.UseVisualStyleBackColor = true;
-            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(432, 270);
+            this.ClientSize = new System.Drawing.Size(402, 285);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lblIntentos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -154,6 +154,7 @@ namespace proyectoFarmacia_v1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 
